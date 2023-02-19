@@ -1,0 +1,9 @@
+.wrapper{
+    background: #19161F;
+    color: grey;
+    min-height: 100vh;
+}
+
+.main_content{
+    display: flex;
+}

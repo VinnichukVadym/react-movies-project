@@ -1,41 +1,42 @@
-import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {useLocation, useParams} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
 import {Pagination, PaginationItem} from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-import css from './GendersPage.module.css';
+
 import {movieActions} from "../../redux";
-import {Movie} from "../../components";
+import css from './Movies.module.css';
+import {Movie} from "../Movie/Movie";
+import {useSearchParams} from "react-router-dom";
 
-const GenresPage = () => {
+const Movies = () => {
 
     const dispatch = useDispatch();
-    const {page_genre, movies, totalPages} = useSelector(({movies}) => movies);
-    const {state: id} = useLocation();
-    const {genre} = useParams();
+    const {movies, totalPages, page} = useSelector(({movies}) => movies);
+    const [, setParams] = useSearchParams({page});
 
     const handleChange = (page) => {
         dispatch(movieActions.setPage(page))
     }
 
     useEffect(() => {
-        dispatch(movieActions.getMoviesByGenre({id, page: page_genre}))
-    }, [dispatch, id, page_genre])
+        dispatch(movieActions.getAll({page}))
+        setParams({page})
+    }, [dispatch, page])
 
     return (
-        <div className={css.genders}>
-            <h2 className={css.title}>{genre}</h2>
+        <div className={css.movies}>
+            <h2 className={css.title}>Movies</h2>
             <div className={css.movies_contents}>
-                {movies && movies.map(movie => <Movie key={movie.id} movie={movie}/>)}
+                {movies.map(movie => <Movie key={movie.id} movie={movie}/>)}
             </div>
             {totalPages &&
                 <Pagination
                     className={css.movies_pagination}
                     color={'primary'}
                     variant="outlined"
-                    defaultPage={page_genre}
+                    defaultPage={page}
                     boundaryCount={1}
                     siblingCount={2}
                     count={totalPages}
@@ -50,5 +51,5 @@ const GenresPage = () => {
 };
 
 export {
-    GenresPage
+    Movies
 }

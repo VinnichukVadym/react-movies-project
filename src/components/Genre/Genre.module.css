@@ -1,0 +1,17 @@
+.genre{
+    width: 10vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.genre button{
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.genre button:hover{
+    color: aqua;
+}

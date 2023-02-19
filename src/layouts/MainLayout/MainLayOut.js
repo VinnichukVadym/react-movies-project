@@ -1,13 +1,17 @@
 import {Outlet} from "react-router-dom";
 
-import {Header} from "../../components";
+import {Genres, Header} from "../../components";
+import css from './MainLayout.module.css';
 
 const MainLayOut = () => {
 
     return (
-        <div>
+        <div className={css.wrapper}>
             <Header/>
-            <Outlet/>
+            <div className={css.main_content}>
+                <Genres/>
+                <Outlet/>
+            </div>
         </div>
     );
 };

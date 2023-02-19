@@ -7,8 +7,8 @@ const movieService = {
     getGenre: () => apiService.get(urls.genre),
     search: (query, page = 1) => apiService.get(urls.search,
         {params: {query, page}}),
-    poster: (path) => apiService.get(urls.poster(path)),
     popular: (page = 1) => apiService.get(urls.popular, {params: {page}}),
+    sortGenre: (id, page = 1) => apiService.get(`${urls.movies}`, {params: {page, with_genres: id}}),
 
 }
 

@@ -1,0 +1,28 @@
+.movies {
+    width: 88vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title{
+    text-align: center;
+}
+.movies_contents {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.movies_pagination {
+    color: #61dafb;
+    height:80px;
+    display: flex;
+    justify-content: center;
+}
+
+.movies_pagination ul li button {
+    color: #ffffff;
+    font-size: 22px;
+}

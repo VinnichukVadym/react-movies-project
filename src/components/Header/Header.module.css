@@ -1,0 +1,68 @@
+.header {
+    /*width: 100vw;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70px;
+    gap: 40vw;
+    font-size: 26px;
+}
+
+.header_left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    color: white;
+    margin: 0;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+.header a {
+    text-decoration: none;
+    color: grey;
+}
+
+.header a[class='active'] {
+    color: white;
+}
+
+.header a:hover {
+    color: white;
+}
+
+.header_right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search_icon {
+    width: 25px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.user_photo {
+    width: 40px;
+    height: 40px;
+    background: grey;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
