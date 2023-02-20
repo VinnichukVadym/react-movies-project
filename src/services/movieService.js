@@ -9,7 +9,6 @@ const movieService = {
         {params: {query, page}}),
     popular: (page = 1) => apiService.get(urls.popular, {params: {page}}),
     sortGenre: (id, page = 1) => apiService.get(`${urls.movies}`, {params: {page, with_genres: id}}),
-
 }
 
 export {
