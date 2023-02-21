@@ -14,16 +14,16 @@ const Movies = () => {
 
     const dispatch = useDispatch();
     const {movies, totalPages, page} = useSelector(({movies}) => movies);
-    const [, setParams] = useSearchParams({page});
+    const [query, seQuery] = useSearchParams({page});
 
     const handleChange = (page) => {
-        dispatch(movieActions.setPage(page))
+        dispatch(movieActions.setPage(page));
+        seQuery({page});
     }
 
     useEffect(() => {
-        dispatch(movieActions.getAll({page}))
-        setParams({page})
-    }, [dispatch, page])
+        dispatch(movieActions.getAll({page: query.get('page')}));
+    }, [dispatch, page, query])
 
     return (
         <div className={css.movies}>
@@ -37,6 +37,7 @@ const Movies = () => {
                     color={'primary'}
                     variant="outlined"
                     defaultPage={page}
+                    page={page}
                     boundaryCount={1}
                     siblingCount={2}
                     count={totalPages}

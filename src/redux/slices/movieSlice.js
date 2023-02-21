@@ -7,7 +7,6 @@ const initialState = {
     genres: [],
     totalPages: null,
     page: 1,
-    page_genre: 1,
     movieDetails: null
 
 };
@@ -67,7 +66,6 @@ const movieSlice = createSlice({
     reducers: {
         setPage: (state, action) => {
             state.page = action.payload;
-            state.page_genre = action.payload;
         },
         setMovie: (state, action) => {
             state.movieDetails = action.payload
@@ -88,7 +86,7 @@ const movieSlice = createSlice({
             })
             .addCase(getMoviesByGenre.fulfilled, (state, action) => {
                 state.movies = action.payload.results;
-                state.page_genre = action.payload.page;
+                state.page = action.payload.page;
                 state.totalPages = 500;
             })
 
