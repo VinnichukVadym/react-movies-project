@@ -1,7 +1,7 @@
 .header {
-    /*width: 100vw;*/
     display: flex;
     justify-content: space-around;
+    background: #19161F;
     align-items: center;
     height: 70px;
     gap: 40vw;
@@ -31,7 +31,7 @@
 }
 
 .header a:hover {
-    color: white;
+    color: var(--color-accent);
 }
 
 .header_right {
@@ -53,6 +53,7 @@
 .user {
     display: flex;
     align-items: center;
+    color: grey;
     column-gap: 10px;
 }
 
@@ -66,3 +67,66 @@
     align-items: center;
     justify-content: center;
 }
+
+/*///////////////////////////*/
+/*.switch {*/
+/*    position: fixed;*/
+/*    top: 25px;*/
+/*    right: 25px;*/
+/*    z-index: 2;*/
+/*    display: inline-block;*/
+/*    width: 50px;*/
+/*    height: 25px;*/
+/*}*/
+
+/*.switch input {*/
+/*    width: 0;*/
+
+/*}*/
+
+/*.slider {*/
+/*    position: absolute;*/
+/*    cursor: pointer;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background-color: #ccc;*/
+/*    -webkit-transition: 0.4s;*/
+/*    transition: 0.4s;*/
+/*}*/
+
+/*.slider:before {*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    height: 30px;*/
+/*    width: 30px;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    margin: auto 0;*/
+/*    -webkit-transition: 0.4s;*/
+/*    transition: 0.4s;*/
+/*    box-shadow: 0 0 15px #ccc;*/
+/*    background: white url('https://cdn-0.emojis.wiki/emoji-pics/google/white-circle-google.png') no-repeat center;*/
+/*    border-radius: 50%;*/
+/*}*/
+
+/*input:checked + .slider {*/
+/*    background-color: #ccc;*/
+/*}*/
+
+/*input:focus + .slider {*/
+/*    box-shadow: 0 0 1px #2020203d;*/
+/*}*/
+
+/*input:checked + .slider:before {*/
+/*    -ms-transform: translateX(24px);*/
+/*    transform: translateX(24px);*/
+/*    background: white url('https://cdn-0.emojis.wiki/emoji-pics/google/white-circle-google.png') no-repeat center;*/
+/*}*/
+
+/*.slider {*/
+/*    border-radius: 20px;*/
+/*}*/
+

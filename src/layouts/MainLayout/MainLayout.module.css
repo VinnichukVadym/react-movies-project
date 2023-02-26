@@ -1,6 +1,6 @@
 .wrapper{
-    background: #19161F;
-    color: grey;
+    background: var(--color-primary);
+    color: var( --font-color_header);
     min-height: 100vh;
 }
 

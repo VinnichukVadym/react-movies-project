@@ -36,7 +36,7 @@ const GenresPage = () => {
 
     useEffect(() => {
         if (id) {
-            dispatch(movieActions.getMoviesByGenre({id, page: query.get('page') || 1}))
+            dispatch(movieActions.getMoviesByGenre({id, page: query.get('page') || 1}));
         }
     }, [id, page, dispatch, query])
 

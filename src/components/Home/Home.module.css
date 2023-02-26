@@ -1,29 +1,21 @@
-.movies {
+.home {
     width: 83vw;
     color: var(--font-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 20px;
 }
-.title{
+
+.title {
     text-align: center;
 }
-.movies_contents {
+
+.home_contents {
     width: 75vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-}
-
-.movies_pagination {
-    height:80px;
-    display: flex;
-    justify-content: center;
-}
-
-.movies_pagination ul li button {
-    color: var(--font-color);
-    font-size: 22px;
 }

@@ -6,7 +6,7 @@ const urls = {
     movies: `/discover/${movie}`,
     movieById: (id) => `${movie}/${id}`,
     genre: `/genre/${movie}/list`,
-    search: '/search/keyword?query=',
+    search: '/search/movie',
     popular: `/${movie}/popular`,
 
 };

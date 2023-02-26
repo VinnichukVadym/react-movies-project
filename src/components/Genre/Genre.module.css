@@ -7,11 +7,11 @@
 .genre button{
     background: none;
     border: none;
-    color: white;
+    color: var(--font-color);
     font-size: 20px;
     cursor: pointer;
 }
 
 .genre button:hover{
-    color: aqua;
+    color: var(--color-accent);
 }

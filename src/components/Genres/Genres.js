@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import {Genre} from "../Genre/Genre";
 import {movieActions} from "../../redux";
+import css from './Genres.module.css';
 
 const Genres = () => {
 
@@ -14,7 +15,7 @@ const Genres = () => {
     }, [dispatch])
 
     return (
-        <div style={{marginTop:60}}>
+        <div className={css.genres}>
             {genres && genres.map((genre) => <Genre key={genre.id} genre={genre}/>)}
         </div>
     );

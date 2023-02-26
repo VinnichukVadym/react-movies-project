@@ -1,6 +1,6 @@
 .movie {
     flex: 18%;
-    color: white;
+    color: var(--font-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,5 +11,7 @@
 }
 
 .movie_poster{
-
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
 }

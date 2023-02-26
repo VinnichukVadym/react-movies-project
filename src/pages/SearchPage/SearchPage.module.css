@@ -1,0 +1,78 @@
+.search {
+    width: 88vw;
+    color: var(--font-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.title {
+    text-align: center;
+}
+
+.search_contents {
+    width: 75vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.search_pagination {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.search_pagination ul li button {
+    color: var(--font-color);
+    font-size: 22px;
+}
+
+
+.form {
+    width: 50vw;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.input {
+    height: inherit;
+    font-size: 22px;
+    border-radius: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+.input:focus::placeholder {
+    color: var(--color-accent);
+}
+
+.input:focus {
+    border: 2px solid white;
+    background: var(--color-primary) ;
+    color: var(--font-color);
+}
+
+.btn {
+    height: 40px;
+    border: none;
+    background: white;
+    color: var(--font-color_header);
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.btn:hover {
+    background: var(--color-primary);
+    border: 1px var(--font-color) solid;
+    color: var(--color-accent);
+    padding: 9px 19px;
+}

@@ -1,14 +1,17 @@
 .genders {
-    width: 88vw;
-    color: white;
+    width: 83vw;
+    color: var(--font-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 .title{
     text-align: center;
 }
+
 .movies_contents {
+    width: 75vw;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -16,13 +19,12 @@
 }
 
 .movies_pagination {
-    color: #61dafb;
     height:80px;
     display: flex;
     justify-content: center;
 }
 
 .movies_pagination ul li button {
-    color: #ffffff;
+    color: var(--font-color);
     font-size: 22px;
 }
